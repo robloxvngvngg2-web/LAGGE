@@ -14,7 +14,7 @@ local function LoadConfig()
             return readfile(ConfigFile)
         end)
         if success and fileData and fileData ~= "" then
-            local decodedSuccess, data = pcall(function()
+           local decodedSuccess, data = pcall(function()
                 return HttpService:JSONDecode(fileData)
             end)
             if decodedSuccess and data then
